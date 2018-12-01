@@ -6,7 +6,8 @@ const Item = props => (
       but you need to pass it down to the sub components that need access to it
       in this case, you need to pass down the query item
     */}
-    <SingleItem id={props.query.item} />
+    {console.log('PAGE PROPS', props)}
+    <SingleItem id={props.query.id} />
   </div>
 );
 
