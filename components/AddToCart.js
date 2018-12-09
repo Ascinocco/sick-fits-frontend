@@ -11,6 +11,7 @@ const ADD_TO_CART_MUTATION = gql`
   }
 `;
 
+// We could apply an optimistic response to this mutation
 class AddToCart extends React.Component {
   render() {
     const { id } = this.props;
