@@ -6,6 +6,7 @@ import Title from './styles/Title';
 import ItemStyles from './styles/ItemStyles';
 import PriceTag from './styles/ItemStyles';
 import DeleteItem from './DeleteItem';
+import AddToCart from './AddToCart';
 
 import formatMoney from '../lib/formatMoney';
 
@@ -32,9 +33,7 @@ class Item extends Component {
           <Link href={{ pathname: 'update', query: { id: item.id } }}>
             <a>Edit</a>
           </Link>
-          <Link href={{ pathname: 'add', query: { id: item.id } }}>
-            <a>Add To Cart</a>
-          </Link>
+          <AddToCart id={item.id} />
           {/* <Link href={{ pathname: 'delete', query: { id: item.id } }}> */}
           <DeleteItem id={item.id} >
             Delete Item
