@@ -19,6 +19,7 @@ const CartItemStyles = styled.li`
 
 const CartItem = (props) => {
   const { id, quantity, item } = props.cartItem;
+  if (!item) return null; // this handles the case in which an item has been deleted from the db
   return (
     <CartItemStyles>
       <img width="100" src={item.image} alt={item.title} />
