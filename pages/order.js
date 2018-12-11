@@ -1,6 +1,11 @@
-const order = () => (
+import PleaseSignIn from '../components/PleaseSignIn';
+import Order from '../components/Order';
+
+const order = props => (
   <div>
-    This is a single order
+    <PleaseSignIn>
+      <Order id={props.query.id} />
+    </PleaseSignIn>
   </div>
 );
 
